@@ -1,0 +1,27 @@
+{
+  "name": "codeceptjs-tests-home-task",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test-api": "npx codeceptjs run --config=api.codecept.conf.js --steps --reporter mocha-multi",
+    "test-api-multiple": "npx codeceptjs run-workers 2 --config=api.codecept.conf.js",
+    "test-web": "npx codeceptjs run --config=web.codecept.conf.js --steps --reporter mocha-multi",
+    "test-web-multiple": "npx codeceptjs run-workers 2 --config=web.codecept.conf.js "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "codeceptjs": "^3.3.6",
+    "playwright": "^1.28.1"
+  },
+  "dependencies": {
+    "codeceptjs-chai": "^2.3.3",
+    "mocha-multi": "^1.1.7",
+    "mochawesome": "^7.1.3"
+  },
+  "engines": {
+    "node": "18.12.x",
+    "npm": "9.1.x"
+  }
+}
