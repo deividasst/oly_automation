@@ -1,0 +1,7 @@
+# Ignore node_modules folder
+node_modules
+# Ignore ouput folders content
+web/output/
+api/output/
+# Ignore package-lock file
+package-lock.json
