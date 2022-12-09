@@ -2,13 +2,9 @@ const { url } = require('../../data/apiUrlData');
 
 Feature('Itegration Folders API');
 
-Scenario('Authorized GET request - validate response body', async ({ I }) => {
-  const res = await I.sendGetRequest(url.backOffice + 'api/folders');
-  console.log(res.data);
-
-  // I.seeResponseValidByCallback(({ data, status, expect }) => {
-  //   expect(status).to.eql(200);
-  //   expect(data.ip).to.be.a('string');
-  //   expect(data.token).to.be.a('string');
-  // });
+Scenario('it should get 200 status and valid response body', async ({ I }) => {
+  await I.sendGetRequest(url.backOffice + 'api/folders');
+  I.seeResponseValidByCallback(({ data, status, expect }) => {
+    expect(status).to.eql(200);
+  });
 }).tag('@api').tag('@bonus').tag('@folders');
